@@ -36,7 +36,7 @@ function Developments() {
                                     <div className="">
                                         <div className="sm:flex sm:justify-center">
                                             <img
-                                                src={article.image}
+                                                src={article.image_url}
                                                 className="w-80 rounded-lg object-cover"
                                                 alt=""
                                             />

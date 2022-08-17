@@ -9,7 +9,7 @@ function AdminArticles() {
         <Layout>
 
             <div className="">
-                <div className="flex lg:justify-between sm:justify-center">
+                <div className="flex items-center lg:justify-between sm:justify-center">
                     <div className="">
                         <h3
                             className="text-gray-200 font-semibold lg:text-3xl sm:text-2xl mb-2"
@@ -18,7 +18,7 @@ function AdminArticles() {
                         </h3>
                     </div>
                     <div className="">
-                        <Link to='new-article' className='flex justify-center space-x-2  items-center text-gray-200 border-2 border-gray-200 px-2 rounded hover:text-gray-900 hover:bg-gray-200 ease-in duration-300'>New Article</Link>
+                        <Link to='new-article' className='flex justify-center space-x-2  items-center text-gray-200 px-3 rounded hover:text-gray-900 hover:bg-gray-200 ease-in duration-300'>Add Article</Link>
                     </div>
                 </div>
 
@@ -36,7 +36,7 @@ function AdminArticles() {
                                 <h3 className='text-gray-200 font-bold uppercase'>Titulo</h3>
                                 <p className='text-gray-400 font-semibold uppercase'>00/00/00</p>
                                 <div className="">
-                                    <Link to='new-post' className='text-gray-200 hover:bg-gray-200 hover:text-gray-900 border-2 border-gray-200 px-8  rounded '>Add Post</Link>
+                                    <Link to='new-post' className='text-gray-900 bg-gray-200 px-4  rounded '>Add Post</Link>
                                 </div>
                             </div>
                         </div>

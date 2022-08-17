@@ -16,7 +16,7 @@ def Article(request):
         # Queryset
         article = Articles.objects.all()
         # Serializer
-        serializer = ArticleSerializer(article,  many=True)
+        serializer = ArticleSerializer(article, many=True, context={'request': request})
         return Response(serializer.data, status=status.HTTP_200_OK)
     
     # Create
@@ -42,13 +42,13 @@ def ArticleRetrieve(request, pk = None):
         # Retrieve
         if request.method == 'GET':
             # Serializer
-            serializer = ArticleSerializer(article)
+            serializer = ArticleSerializer(article, context={'request': request})
             return Response(serializer.data)
 
         # Update
         elif request.method == 'PUT':
             # Serializer   
-            serializer = ArticleSerializer(article, data=request.data)
+            serializer = ArticleSerializer(article, data=request.data, context={'request': request})
             
             # Validacion
             if serializer.is_valid():

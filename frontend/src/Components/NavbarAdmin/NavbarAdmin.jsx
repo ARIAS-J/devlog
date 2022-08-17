@@ -35,7 +35,7 @@ const NavbarAdmin = () => {
                         </p>
                     </Link>
                     <Link to="/">
-                        <p className="font-semibold text-gray-400 border-2 border-gray-400 rounded px-3  hover:text-gray-900 hover:bg-gray-200 uppercase ease-in duration-300">
+                        <p className="font-semibold text-gray-400 hover:text-gray-900 hover:bg-gray-200 px-3 rounded uppercase ease-in duration-300">
                             Log out
                         </p>
                     </Link>

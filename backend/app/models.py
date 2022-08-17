@@ -5,7 +5,7 @@ from django.db import models
 class Articles(models.Model):
     titulo = models.CharField(max_length=255, null=False)
     descripcion = models.CharField(max_length=150, null=False)
-    image = models.ImageField(null=True, blank=False, upload_to='images/')
+    image = models.ImageField(null=True, blank=False)
     
     # Config
     is_whitelist = models.BooleanField(default=True)
