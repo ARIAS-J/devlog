@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { Footer, AuthProvider } from "./Components";
-import { Home, Developments, Projects, Admin, AdminArticles, AdminProjects, ErrorPage, Login, NewArticle, NewPost } from './Pages'
+import { Home, Developments, Admin, AdminArticles, ErrorPage, Login, NewArticle, NewPost } from './Pages'
 
 
 function App() {
@@ -12,15 +12,14 @@ function App() {
           <Routes>
             {/* Public Routes */}
             <Route path="/" element={<Home />} />
+            <Route path="/author" element={<Home />} />
             <Route path="/developments" element={<Developments />} />
-            <Route path="/projects" element={<Projects />} />
 
             {/* Admin Routes */}
             <Route path="/admin" element={<Admin />} />
             <Route path="/admin/articles" element={<AdminArticles />} />
             <Route path="/admin/articles/new-article" element={<NewArticle />} />
             <Route path="/admin/articles/new-post" element={<NewPost />} />
-            <Route path="/admin/projects" element={<AdminProjects />} />
 
             {/* Authentication routes */}
             <Route path="/login" element={<Login />} />

@@ -33,14 +33,14 @@ const Navbar = () => {
                             Home
                         </p>
                     </Link>
+                    <Link to="/">
+                        <p className="font-semibold text-gray-400 hover:text-gray-200 uppercase ease-in duration-300">
+                            Author
+                        </p>
+                    </Link>
                     <Link to="/developments">
                         <p className="font-semibold text-gray-400 hover:text-gray-200 uppercase ease-in duration-300">
                             Developments
-                        </p>
-                    </Link>
-                    <Link to="/projects">
-                        <p className="font-semibold text-gray-400 hover:text-gray-200 uppercase ease-in duration-300">
-                            Project
                         </p>
                     </Link>
                 </div>

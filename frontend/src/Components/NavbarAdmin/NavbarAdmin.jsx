@@ -23,8 +23,6 @@ const NavbarAdmin = () => {
                     </h1>
                 </div>
 
-
-
                 <div className="lg:flex items-center lg:space-x-20 sm:hidden">
 
                     {/* <div className="">
@@ -34,11 +32,6 @@ const NavbarAdmin = () => {
                     <Link to="/admin/articles">
                         <p className="font-semibold text-gray-400 hover:text-gray-200 uppercase ease-in duration-300">
                             Articles
-                        </p>
-                    </Link>
-                    <Link to="/admin/projects">
-                        <p className="font-semibold text-gray-400 hover:text-gray-200 uppercase ease-in duration-300">
-                            Projects
                         </p>
                     </Link>
                     <Link to="/">
