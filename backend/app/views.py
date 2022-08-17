@@ -10,13 +10,13 @@ from .models import Articles, Posts, Comments
 
 @swagger_auto_schema(methods=['post'], request_body=ArticleSerializer)
 @api_view(['GET', 'POST'])
-def Articles(request):
+def Article(request):
     # List
     if request.method == 'GET':
         # Queryset
-        clientes = Articles.objects.all()
+        article = Articles.objects.all()
         # Serializer
-        serializer = ArticleSerializer(clientes,  many=True)
+        serializer = ArticleSerializer(article,  many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
     
     # Create
@@ -32,7 +32,7 @@ def Articles(request):
 
 @swagger_auto_schema(methods=['put'], request_body=ArticleSerializer)
 @api_view(['GET','PUT', 'DELETE'])
-def ArticlesRetrieve(request, pk = None):
+def ArticleRetrieve(request, pk = None):
     # Queryset
     article = Articles.objects.filter(id = pk).first()
     
@@ -66,7 +66,7 @@ def ArticlesRetrieve(request, pk = None):
 # Posts
 @swagger_auto_schema(methods=['post'], request_body=PostsSerializer)
 @api_view(['GET', 'POST'])
-def Posts(request):
+def Post(request):
     # List
     if request.method == 'GET':
         # Queryset
@@ -88,7 +88,7 @@ def Posts(request):
 
 @swagger_auto_schema(methods=['put'], request_body=PostsSerializer)
 @api_view(['GET','PUT', 'DELETE'])
-def PostsRetrieve(request, pk = None):
+def PostRetrieve(request, pk = None):
     # Queryset
     post = Posts.objects.filter(id = pk).first()
     
@@ -123,7 +123,7 @@ def PostsRetrieve(request, pk = None):
 # Comments
 @swagger_auto_schema(methods=['post'], request_body=CommentsSerializer)
 @api_view(['GET', 'POST'])
-def Comments(request):
+def Comment(request):
     # List
     if request.method == 'GET':
         # Queryset
@@ -145,7 +145,7 @@ def Comments(request):
 
 @swagger_auto_schema(methods=['put'], request_body=CommentsSerializer)
 @api_view(['GET','PUT', 'DELETE'])
-def CommentsRetrieve(request, pk = None):
+def CommentRetrieve(request, pk = None):
     # Queryset
     comment = Comments.objects.filter(id = pk).first()
     

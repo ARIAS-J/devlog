@@ -1,13 +1,13 @@
 from django.urls import path
-from .views import Articles, ArticlesRetrieve, Comments, CommentsRetrieve, Posts, PostsRetrieve
+from .views import Article, ArticleRetrieve, Comment, CommentRetrieve, Post, PostRetrieve
 urlpatterns = [
     # Articles Route
-    path('articles', Articles),
-    path('articles/<int:pk>/', ArticlesRetrieve),
+    path('articles', Article),
+    path('articles/<int:pk>/', ArticleRetrieve),
     # Comments Route
-    path('comments', Comments),
-    path('comments/<int:pk>/', CommentsRetrieve),
+    path('comments', Comment),
+    path('comments/<int:pk>/', CommentRetrieve),
     # Posts Route
-    path('posts', Posts),
-    path('posts/<int:pk>/', PostsRetrieve),
+    path('posts', Post),
+    path('posts/<int:pk>/', PostRetrieve),
 ]
