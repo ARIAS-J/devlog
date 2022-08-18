@@ -33,10 +33,10 @@ function AdminArticles() {
 
 
                             <div className="space-y-8">
-                                <h3 className='text-gray-200 font-bold uppercase'>Titulo</h3>
+                                <h3 className='text-gray-200 font-bold uppercase'>Titulo del proyecto</h3>
                                 <p className='text-gray-400 font-semibold uppercase'>00/00/00</p>
                                 <div className="">
-                                    <Link to='new-post' className='text-gray-900 bg-gray-200 px-4  rounded '>Add Post</Link>
+                                    <Link to='new-post' className='hover:text-gray-900 text-gray-200 hover:bg-gray-200 px-10 py-1 border-2 rounded ease-in duration-300'>Add Post</Link>
                                 </div>
                             </div>
                         </div>
