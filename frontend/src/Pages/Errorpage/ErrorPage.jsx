@@ -2,7 +2,7 @@ import { image } from "../../Constants";
 
 const ErrorPage = () => {
     return (
-        <div className="flex justify-center text-center">
+        <div className="flex justify-center text-center mt-24">
             <div className="space-y-10 inline-block justify-center items-center">
                 <div className="flex justify-center">
                     <img src={image.logo} className="lg:w-36 sm:w-14 md:w-20" alt="" />
