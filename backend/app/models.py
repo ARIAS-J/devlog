@@ -3,9 +3,10 @@ from django.db import models
 # Create your models here.
 
 class Articles(models.Model):
+    id = models.AutoField(primary_key=True, unique=True)
     titulo = models.CharField(max_length=255, null=False)
     descripcion = models.CharField(max_length=150, null=False)
-    image = models.ImageField(null=True, blank=False)
+    image = models.ImageField(upload_to='static/images/',null=True, blank=True)
     
     # Config
     is_whitelist = models.BooleanField(default=True)
@@ -17,6 +18,7 @@ class Articles(models.Model):
 
 
 class Posts(models.Model):
+    id = models.AutoField(primary_key=True, unique=True)
     content = models.CharField(max_length=5000, null=False)
     
     # Relationship
@@ -29,6 +31,7 @@ class Posts(models.Model):
 
 
 class Comments(models.Model):
+    id = models.AutoField(primary_key=True, unique=True)
     content = models.CharField(max_length=600, null=False)
     
     # Relationship
