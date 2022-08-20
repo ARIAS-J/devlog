@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { Footer, AuthProvider } from "./Components";
-import { Home, Developments, Admin, AdminArticles, ErrorPage, Login, NewArticle, NewPost } from './Pages'
+import { Home, Developments, Admin, AdminArticles, ErrorPage, Login, NewArticle, NewPost, DevelopmentsSummary } from './Pages'
 
 
 function App() {
@@ -14,6 +14,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/author" element={<Home />} />
             <Route path="/developments" element={<Developments />} />
+            <Route path="/developments/:id" element={<DevelopmentsSummary />} />
 
             {/* Admin Routes */}
             <Route path="/admin" element={<Admin />} />
