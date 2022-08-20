@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
 import axios from "axios";
 import Layout from "../../Components/Layout/Layout";
-
+import { image } from "../../Constants";
+import { Link } from "react-router-dom";
 
 function Developments() {
     const [articles, setArticles] = useState([])
@@ -31,55 +32,60 @@ function Developments() {
                         {articles.map((article) => {
                             return (
                                 <div
-                                    className="lg:flex sm:inline lg:space-x-8 sm:space-y-4 w-full lg:text-left sm:text-center mt-10"
+                                    className="w-full mt-5"
                                 >
-                                    <div className="">
-                                        <div className="sm:flex sm:justify-center">
-                                            <img
-                                                src={article.image_url}
-                                                className="w-80 rounded-lg object-cover"
-                                                alt=""
-                                            />
+                                    <div className="lg:flex items-center sm:inline lg:space-x-8 sm:space-y-4 w-full lg:text-left sm:text-center">
+
+                                        <div className="w-full flex justify-center">
+                                            <div className="sm:flex sm:justify-center">
+                                                <img
+                                                    src={article.image_url}
+                                                    className="w-full rounded-lg object-cover"
+                                                    alt=""
+                                                />
+                                            </div>
                                         </div>
 
-                                        <div className="flex w-full justify-center space-x-8 mt-4">
-                                            <span
-                                                className="iconify text-lg text-gray-400 hover:text-gray-200 ease-in duration-300"
-                                                data-icon="cib:python"
-                                            />
-                                            <span
-                                                className="iconify text-lg text-gray-400 hover:text-gray-200 ease-in duration-300"
-                                                data-icon="cib:django"
-                                            />
-                                            <span
-                                                className="iconify text-lg text-gray-400 hover:text-gray-200 ease-in duration-300"
-                                                data-icon="cib:svelte"
-                                            />
-                                        </div>
-                                    </div>
+                                        <div className="w-full items-center">
+                                            <div className="mb-3">
+                                                <h3 className="text-gray-200 font-bold uppercase">
+                                                    {article.titulo}
+                                                </h3>
+                                            </div>
 
-                                    <div className="space-y-3">
-                                        <div>
-                                            <h3 className="text-gray-200 font-bold uppercase">
-                                                {article.titulo}
-                                            </h3>
-                                        </div>
+                                            <div className="mb-4">
+                                                <p className="text-gray-400 font-normal uppercase">
+                                                    {article.descripcion}
+                                                </p>
+                                            </div>
 
-                                        <div>
-                                            <p className="text-gray-400 font-semibold uppercase">
-                                                {article.descripcion}
-                                            </p>
-                                        </div>
+                                            <div className="flex w-28 justify-between mb-5">
+                                                <span
+                                                    className="iconify text-2xl text-gray-400 hover:text-gray-200 ease-in duration-300"
+                                                    data-icon="cib:python"
+                                                />
+                                                <span
+                                                    className="iconify text-2xl text-gray-400 hover:text-gray-200 ease-in duration-300"
+                                                    data-icon="cib:django"
+                                                />
+                                                <span
+                                                    className="iconify text-2xl text-gray-400 hover:text-gray-200 ease-in duration-300"
+                                                    data-icon="cib:svelte"
+                                                />
+                                            </div>
 
-                                        <div>
-                                            <button
-                                                className="border-2 border-gray-200 hover:bg-gray-200 text-gray-200 hover:text-gray-900 ease-in duration-300 px-16 py-2 sm:px-16 sm:py-1 rounded-lg"
-                                            >View</button>
+                                            <div>
+                                                <Link to={`/developments/${article.titulo}`}
+                                                    className="border-2 border-gray-200 hover:bg-gray-200 text-gray-200 hover:text-gray-900 text-lg ease-in duration-300 px-16 py-2 sm:px-16 sm:py-1 rounded"
+                                                >View</Link>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             )
                         })}
+
+
 
 
                     </div>

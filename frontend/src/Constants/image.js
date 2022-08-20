@@ -1,4 +1,4 @@
 import logo from '../Assets/logo.svg'
 
-
-export default { logo };
+import image from '../Assets/image.png'
+export default { logo, image };
