@@ -19,7 +19,7 @@ const NewPost = () => {
                         </h3>
                     </div>
                     <div className="space-x-5">
-                        <Link to='/admin/articles' className='flex justify-center items-center text-gray-200 px-3 rounded hover:text-gray-900 hover:bg-gray-200 ease-in duration-300'><MdKeyboardReturn className='mr-1 text-lg' /> Return</Link>
+                        <Link to='/admin/articles' className='flex justify-center items-center px-3 rounded text-gray-900 bg-gray-400 hover:bg-gray-200 ease-in duration-300'><MdKeyboardReturn className='mr-1 text-lg' /> Return</Link>
                     </div>
                 </div>
 
