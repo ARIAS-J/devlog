@@ -7,5 +7,6 @@ import NewArticle from './NewArticle/NewArticle'
 import NewPost from './NewPost/NewPost'
 import ErrorPage from './Errorpage/ErrorPage'
 import Login from './Login/Login'
+import UpdateArticle from './UpdateArticle/UpdateArticle'
 
-export { Home, Developments, Admin, AdminArticles, ErrorPage, Login, NewArticle, NewPost, DevelopmentsBlog }
+export { Home, Developments, Admin, AdminArticles, ErrorPage, Login, NewArticle, NewPost, DevelopmentsBlog, UpdateArticle }

@@ -21,7 +21,7 @@ function AdminArticles() {
                 <div className="flex items-center lg:justify-between sm:justify-center">
                     <div className="">
                         <h3
-                            className="text-gray-200 font-semibold lg:text-3xl sm:text-2xl mb-2"
+                            className="text-gray-200 font-semibold lg:text-2xl sm:text-2xl mb-2 uppercase"
                         >
                             Articles
                         </h3>
@@ -48,7 +48,7 @@ function AdminArticles() {
                                         <h3 className='text-gray-200 font-bold uppercase'>{article.titulo}</h3>
                                         <p className='text-gray-400 font-semibold uppercase'>00/00/00</p>
                                         <div className="">
-                                            <Link to={`/admin/articles/new_post/${article.titulo}`} className='hover:text-gray-900 text-gray-200 hover:bg-gray-200 px-10 py-1 border-2 rounded ease-in duration-300'>Add Post</Link>
+                                            <Link to={`/admin/articles/new_post/${article.titulo}`} className='hover:text-gray-900 text-gray-200 hover:bg-gray-200 px-8 py-1 border-2 rounded ease-in duration-300'>Add Post</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -56,7 +56,7 @@ function AdminArticles() {
                                 <div className="flex justify-center">
                                     <div className='items-center space-y-5'>
                                         <div className=""><button className='text-gray-400 hover:text-gray-200 ease-in duration-300 text-3xl'><span class="iconify" data-icon="carbon:view"></span></button></div>
-                                        <div className=""><button className='text-gray-400 hover:text-gray-200 ease-in duration-300 text-3xl'><span class="iconify" data-icon="fluent:edit-20-regular"></span></button></div>
+                                        <div className=""><Link to={`/admin/articles/update_article/${article.titulo}`} className='text-gray-400 hover:text-gray-200 ease-in duration-300 text-3xl'><span class="iconify" data-icon="fluent:edit-20-regular"></span></Link></div>
                                         <div className=""><button className='text-gray-400 hover:text-gray-200 ease-in duration-300 text-3xl'><span class="iconify" data-icon="ion:trash-bin-outline"></span></button></div>
                                     </div>
                                 </div>

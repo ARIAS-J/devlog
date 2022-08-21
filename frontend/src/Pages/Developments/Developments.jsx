@@ -20,7 +20,7 @@ function Developments() {
                 <div className="">
                     <div className="flex lg:justify-between sm:justify-center">
                         <h3
-                            className="text-gray-200 font-semibold lg:text-3xl sm:text-2xl mb-2"
+                            className="text-gray-200 font-semibold lg:text-2xl sm:text-2xl mb-2 uppercase"
                         >
                             Developments
                         </h3>

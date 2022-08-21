@@ -9,7 +9,7 @@ const Admin = () => {
             <div className="flex justify-center text-center">
                 <div className="space-y-10 inline-block justify-center items-center mt-16">
                     <h1
-                        className="text-gray-200 font-bold sm:text-md md:text-4xl lg:text-7xl "
+                        className="text-gray-200 font-bold sm:text-md md:text-4xl lg:text-7xl uppercase"
                     >
                         Welcome to Admin
                     </h1>
