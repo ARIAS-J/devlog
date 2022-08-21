@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import { image } from '../../Constants'
 import { Link } from 'react-router-dom';
 import { MdKeyboardReturn } from 'react-icons/md'
+import { FaPython, FaReact } from 'react-icons/fa'
+import { SiDjango, SiFastapi, SiJavascript } from 'react-icons/si'
+
 import Layout from '../../Components/Layout/Layout';
 
 const NewArticle = () => {
@@ -22,13 +25,13 @@ const NewArticle = () => {
                         </h3>
                     </div>
                     <div className="space-x-5">
-                        <Link to='/admin/articles' className='flex justify-center items-center text-gray-200 px-3 rounded hover:text-gray-900 hover:bg-gray-200 ease-in duration-300'><MdKeyboardReturn className='mr-1 text-lg' /> Return</Link>
+                        <Link to='/admin/articles' className='flex justify-center items-center text-gray-900 px-8 py-1 rounded  bg-gray-400 hover:bg-gray-200 ease-in duration-300'><MdKeyboardReturn className='mr-1 text-lg' /> Return</Link>
                     </div>
                 </div>
 
                 <hr className="text-gray-200" />
 
-                <div className="mt-12">
+                <div className="mt-10">
 
                     <div className="inline-block space-y-4">
                         <label className='text-gray-200 font-medium uppercase'>Article title</label>
@@ -37,14 +40,25 @@ const NewArticle = () => {
                         </div>
                     </div>
 
-                    <div className="mt-8 space-y-4">
+                    <div className="w-full mt-5 space-y-4">
                         <label className='text-gray-200 font-medium uppercase'>Article Description</label>
-                        <div className="">
-                            <textarea name="" className='bg-gray-800 border-2 border-gray-700 text-gray-200 px-3 py-2 rounded-lg w-full h-32 resize-none' id="" cols="30" rows="10" placeholder='DESCRIPTION'></textarea>
+                        <div className="w-full grid items-center justify-center grid-cols-2">
+                            <div className="w-full">
+                                <textarea name="" className='bg-gray-800 border-2 border-gray-700 text-gray-200 px-3 py-2 rounded-lg w-full h-32 resize-none' id="" cols="30" rows="10" placeholder='DESCRIPTION'></textarea>
+                            </div>
+                            <div className='w-full flex justify-end'>
+                                <div className='grid grid-cols-5 gap-3 items-center'>
+                                    <button className='text-gray-400 hover:text-gray-200 text-3xl ease-in duration-300'><FaPython /></button>
+                                    <button className='text-gray-400 hover:text-gray-200 text-3xl ease-in duration-300'><SiDjango /></button>
+                                    <button className='text-gray-400 hover:text-gray-200 text-3xl ease-in duration-300'><FaReact /></button>
+                                    <button className='text-gray-400 hover:text-gray-200 text-3xl ease-in duration-300'><SiFastapi /></button>
+                                    <button className='text-gray-400 hover:text-gray-200 text-3xl ease-in duration-300'><SiJavascript /></button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div className="mt-8 space-y-4">
+                    <div className="mt-4 space-y-4">
                         <label className='text-gray-200 font-medium uppercase'>Article Cover</label>
 
                         <div className="flex items-center space-x-6">
