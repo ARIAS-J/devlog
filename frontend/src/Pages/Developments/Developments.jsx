@@ -84,10 +84,6 @@ function Developments() {
                                 </div>
                             )
                         })}
-
-
-
-
                     </div>
                 </div>
             </div>
