@@ -75,7 +75,7 @@ function Developments() {
                                             </div>
 
                                             <div>
-                                                <Link to={`/developments/${article.titulo}`}
+                                                <Link to={`/developments/${article.id}/${article.titulo}`}
                                                     className="border-2 border-gray-200 hover:bg-gray-200 text-gray-200 hover:text-gray-900 text-lg ease-in duration-300 px-16 py-2 sm:px-16 sm:py-1 rounded"
                                                 >View</Link>
                                             </div>

@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
-import { image } from '../../Constants'
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { image } from '../../Constants';
+import axios from "axios";
+import { Link, useParams } from 'react-router-dom';
 import { MdKeyboardReturn } from 'react-icons/md'
 import { FaPython, FaReact } from 'react-icons/fa'
 import { SiDjango, SiFastapi, SiJavascript } from 'react-icons/si'
@@ -8,6 +9,17 @@ import { SiDjango, SiFastapi, SiJavascript } from 'react-icons/si'
 import Layout from '../../Components/Layout/Layout';
 
 const UpdateArticle = () => {
+
+    let { id } = useParams();
+
+    const [article, setArticle] = useState([])
+
+    useEffect(() => {
+        axios.get(`http://127.0.0.1:8000/api/v1/articles/${id}`).then((response) => {
+            setArticle(response.data);
+        })
+    }, [])
+
 
 
     return (
@@ -35,7 +47,7 @@ const UpdateArticle = () => {
                     <div className="inline-block space-y-4">
                         <label className='text-gray-200 font-medium uppercase'>Article title</label>
                         <div className="">
-                            <input type="text" className='bg-gray-800 border-2 border-gray-700 px-3 py-2 rounded-lg' name="title" id="" placeholder='TITLE' />
+                            <input type="text" className='bg-gray-800 border-2 border-gray-700 text-gray-200 px-3 py-2 rounded-lg' name="title" id="" placeholder='TITLE' defaultValue={article.titulo} />
                         </div>
                     </div>
 
@@ -43,7 +55,7 @@ const UpdateArticle = () => {
                         <label className='text-gray-200 font-medium uppercase'>Article Description</label>
                         <div className="w-full grid items-center justify-center grid-cols-2">
                             <div className="w-full">
-                                <textarea name="" className='bg-gray-800 border-2 border-gray-700 text-gray-200 px-3 py-2 rounded-lg w-full h-32 resize-none' id="" cols="30" rows="10" placeholder='DESCRIPTION'></textarea>
+                                <textarea name="" className='bg-gray-800 border-2 border-gray-700 text-gray-200 px-3 py-2 rounded-lg w-full h-32 resize-none' id="" cols="30" rows="10" placeholder='DESCRIPTION' defaultValue={article.descripcion}></textarea>
                             </div>
                             <div className='w-full flex justify-end'>
                                 <div className='grid grid-cols-5 gap-3 items-center'>
@@ -62,7 +74,7 @@ const UpdateArticle = () => {
 
                         <div className="flex items-center space-x-6">
                             <div className="">
-                                <img src="" className='w-60 h-40 rounded object-cover' alt="" />
+                                <img src={article.image_url} className='w-60 h-40 rounded object-cover' alt="" />
                             </div>
                             <div className="">
                                 <input type="file" accept='image/*' className='block w-full text-gray-200 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold  file:bg-none hover:file:bg-gray-200 file:text-gray-900 cursor-pointer ease-in duration-300' />
