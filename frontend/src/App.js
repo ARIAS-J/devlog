@@ -14,14 +14,14 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/author" element={<Home />} />
             <Route path="/developments" element={<Developments />} />
-            <Route path="/developments/:id" element={<DevelopmentsBlog />} />
+            <Route path="/developments/:id/:titulo" element={<DevelopmentsBlog />} />
 
             {/* Admin Routes */}
             <Route path="/admin" element={<Admin />} />
             <Route path="/admin/articles" element={<AdminArticles />} />
             <Route path="/admin/articles/new_article" element={<NewArticle />} />
-            <Route path="/admin/articles/update_article/:id" element={<UpdateArticle />} />
-            <Route path="/admin/articles/new_post/:id" element={<NewPost />} />
+            <Route path="/admin/articles/update_article/:id/:titulo" element={<UpdateArticle />} />
+            <Route path="/admin/articles/new_post/:id/:titulo" element={<NewPost />} />
 
 
             {/* Authentication routes */}
