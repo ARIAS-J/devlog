@@ -24,7 +24,7 @@ function AdminArticles() {
 
             <div className="flex justify-between">
                 <div className="flex space-x-10 items-center">
-                    <div className="">
+                    <div className="sm:flex sm:justify-center">
                         <img src={article.image_url} className='w-60 rounded-lg object-cover' alt="" />
                     </div>
 
@@ -32,7 +32,7 @@ function AdminArticles() {
                         <h3 className='text-gray-200 font-bold uppercase'>{article.titulo}</h3>
                         <p className='text-gray-400 font-semibold uppercase'>00/00/00</p>
                         <div className="">
-                            <Link to={`/admin/articles/new_post/${article.titulo}`} className='hover:text-gray-900 text-gray-200 hover:bg-gray-200 px-8 py-1 border-2 rounded ease-in duration-300'>Add Post</Link>
+                            <Link to={`/admin/articles/new_post/${article.id}/${article.titulo}`} className='hover:text-gray-900 text-gray-200 hover:bg-gray-200 px-8 py-1 border-2 rounded ease-in duration-300'>Add Post</Link>
                         </div>
                     </div>
                 </div>
@@ -75,20 +75,22 @@ function AdminArticles() {
 
                 <div className="mt-5 grid grid-cols-2 gap-8">
                     {displayArticles}
+                </div >
 
+                <div className="flex justify-center mt-4">
                     <ReactPaginate
                         previousLabel={"Back"}
                         nextLabel={"Next"}
                         pageCount={pageCount}
                         onPageChange={changePage}
-                        containerClassName={"paginationBtns flex w-full justify-between"}
-                        pageLinkClassName={"text-gray-200"}
-                        previousLinkClassName={"previousBtn text-gray-200"}
-                        nextLinkClassName={"nextBtn text-gray-200"}
+                        containerClassName={"paginationBtns relative z-0 inline-flex rounded-md shadow-sm -space-x-px"}
+                        pageLinkClassName={"paginationLinks focus:bg-gray-200 focus:text-gray-900 border-gray-200 text-gray-200 hover:text-gray-900 hover:bg-gray-200 relative inline-flex items-center px-4 py-2 border text-sm font-medium ease-in duration-300"}
+                        previousLinkClassName={"previousBtn inline-flex items-center px-2 py-2 rounded-l-md border border-gray-200 text-sm font-medium text-gray-200 hover:text-gray-900 hover:bg-gray-200 ease-in duration-300"}
+                        nextLinkClassName={"nextBtn relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-200 text-sm font-medium text-gray-200 hover:text-gray-900 hover:bg-gray-200 ease-in duration-300"}
                         disabledClassName={"paginationDisabled"}
                         activeClassName={"paginationActive"}
                     />
-                </div >
+                </div>
             </div >
         </Layout>
     )
