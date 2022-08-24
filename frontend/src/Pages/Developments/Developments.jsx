@@ -104,7 +104,7 @@ function Developments() {
                             pageCount={pageCount}
                             onPageChange={changePage}
                             containerClassName={"paginationBtns relative z-0 inline-flex rounded-md shadow-sm -space-x-px"}
-                            pageLinkClassName={"focus:bg-gray-200 focus:text-gray-900 border-gray-200 text-gray-200 hover:text-gray-900 hover:bg-gray-200 relative inline-flex items-center px-4 py-2 border text-sm font-medium ease-in duration-300"}
+                            pageLinkClassName={"paginationLinks focus:bg-gray-200 focus:text-gray-900 border-gray-200 text-gray-200 hover:text-gray-900 hover:bg-gray-200 relative inline-flex items-center px-4 py-2 border text-sm font-medium ease-in duration-300"}
                             previousLinkClassName={"previousBtn inline-flex items-center px-2 py-2 rounded-l-md border border-gray-200 text-sm font-medium text-gray-200 hover:text-gray-900 hover:bg-gray-200 ease-in duration-300"}
                             nextLinkClassName={"nextBtn relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-200 text-sm font-medium text-gray-200 hover:text-gray-900 hover:bg-gray-200 ease-in duration-300"}
                             disabledClassName={"paginationDisabled"}
