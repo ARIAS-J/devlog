@@ -30,7 +30,7 @@ function AdminArticles() {
 
                     <div className="space-y-8">
                         <h3 className='text-gray-200 font-bold uppercase'>{article.titulo}</h3>
-                        <p className='text-gray-400 font-semibold uppercase'>00/00/00</p>
+                        <p className='text-gray-400 font-semibold uppercase'>{article.created_date}</p>
                         <div className="">
                             <Link to={`/admin/articles/new_post/${article.id}/${article.titulo}`} className='hover:text-gray-900 text-gray-200 hover:bg-gray-200 px-8 py-1 border-2 rounded ease-in duration-300'>Add Post</Link>
                         </div>

@@ -175,3 +175,20 @@ def CommentRetrieve(request, pk = None):
             return Response({'message':'Comment correctly deleted.'}, )
 
     return Response({'message':'No comment found'})
+
+
+@swagger_auto_schema(methods=['put'], request_body=PostsSerializer)
+@api_view(['GET','PUT', 'DELETE'])
+def GetArticlePostRetrieve(request, pk = None):
+    # Queryset
+    post = Posts.objects.filter(article_id = pk)
+    
+    # Validacion
+    if post:
+        # Retrieve
+        if request.method == 'GET':
+            # Serializer
+            serializer = PostsSerializer(post,many=True)
+            return Response(serializer.data)
+
+    return Response([])
